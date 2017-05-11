@@ -4,11 +4,10 @@ Un simple plugin d'information serveur
 # Installation
 
 Allez dans le dossier "/Construct" du projet pour obtenir la version 1.8 !
+Ensuite lancez pour la premiere fois le plugin et ensuite modifier le config.yml du plugin ("VOTRESERVEUR/plugins/IGInfos/config.yml")
+Et redemmarer le serveur !
 
-# Attention
+# Commandes
 
-Cette version ne marche pas. Nous sommes entrain de debug le plugin.Pour l'instant une seul locale est disponible : fr-FR
-
-# WARN
-
-This version doesn't work. We are into a debug phase. One locale is ready : fr-FR
+/serverinfos = Obtenir les infos serveur (joueur lambda)
+/adminsrinfos = Obtenir les infos serveur (administrateur)
