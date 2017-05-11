@@ -1,7 +1,5 @@
-active-use-permission: true
 permission:
   admin: iginfos.admin
   all: iginfos.*
-  use: iginfos.use
-
+ 
 server-name: BaseNamePleaseChange

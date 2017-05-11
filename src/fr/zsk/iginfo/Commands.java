@@ -17,39 +17,39 @@ public class Commands implements CommandExecutor {
 		this.config = pl.getConfig();
 	}
 	
-	String permadmin = config.getString("permission.admin");
-	String permall = config.getString("permission.all");
-	boolean activepermuse = config.getBoolean("active-use-permission");
-	String permuse = config.getString("permission.use");
-	String servername = config.getString("server-name");
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String arg2, String[] args) {
 		if(cmd.getName().equalsIgnoreCase("serverinfos")){
+			
 			Player p = (Player) sender;
 			Server s = Bukkit.getServer();
-			if(args.length == 0){
-				p.sendMessage("Voici les informations serveur:");
-				p.sendMessage("Nom du serveur: " + servername);
-				p.sendMessage("IP: "+ s.getIp());
-				p.sendMessage("MOTD: " + s.getMotd());
-				p.sendMessage("Version: " + s.getVersion());
-				p.sendMessage("Joueurs en ligne: " + s.getOnlinePlayers() + "/" + s.getMaxPlayers());
-			}
-			if(args.length >= 1){
-				if(args[1].equalsIgnoreCase("admin")){
-					if(p.hasPermission(permadmin) || p.hasPermission(permall)){
-						p.sendMessage("Informations serveurs (Admins):");
-						p.sendMessage("Nom du serveur: " + servername);
-						p.sendMessage("IP: "+ s.getIp());
-						p.sendMessage("MOTD: " + s.getMotd());
-						p.sendMessage("Version: " + s.getVersion());
-						p.sendMessage("Joueurs en ligne: " + s.getOnlinePlayers() + "/" + s.getMaxPlayers());
-						p.sendMessage("Version Bukkit: " + s.getBukkitVersion());
-						p.sendMessage("Dossier d'update: " + s.getUpdateFolder());
-						p.sendMessage("Server ID: " + s.getServerId());
-					}
-				}
+			String servername = config.getString("server-name");
+			p.sendMessage("§l§m§e+----------§7----------§e----------§7----------§e+");
+			p.sendMessage("§7Voici les informations serveur:");
+			p.sendMessage("§7Nom du serveur: §e" + servername);
+			p.sendMessage("§7IP: §e"+ s.getIp());
+			p.sendMessage("§7MOTD: §e" + s.getMotd());
+			p.sendMessage("§7Version: §e" + s.getVersion());
+			p.sendMessage("§7Joueurs en ligne: §e" + s.getOnlinePlayers().size() + "/" + s.getMaxPlayers());
+			p.sendMessage("§l§m§e+----------§7----------§e----------§7----------§e+");
+		}
+		if(cmd.getName().equalsIgnoreCase("adminsrinfos")){
+			String permadmin = config.getString("permission.admin");
+			String permall = config.getString("permission.all");
+			String servername = config.getString("server-name");
+			Player p = (Player) sender;
+			Server s = Bukkit.getServer();
+			if(p.hasPermission(permadmin) || p.hasPermission(permall)){
+				p.sendMessage("§l§m§e+----------§7----------§e----------§7----------§e+");
+				p.sendMessage("§7Informations serveurs (Admins):");
+				p.sendMessage("§7Nom du serveur: §e" + servername);
+				p.sendMessage("§7IP: §e"+ s.getIp());
+				p.sendMessage("§7MOTD: §e" + s.getMotd());
+				p.sendMessage("§7Version: §e" + s.getVersion());
+				p.sendMessage("§7Joueurs en ligne: §e" + s.getOnlinePlayers().size() + "/" + s.getMaxPlayers());
+				p.sendMessage("§7Version Bukkit: §e" + s.getBukkitVersion());
+				p.sendMessage("§l§m§e+----------§7----------§e----------§7----------§e+");
 			}
 		}
 		return false;

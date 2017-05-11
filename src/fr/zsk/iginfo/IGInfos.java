@@ -10,7 +10,9 @@ public class IGInfos extends JavaPlugin{
 		getConfig().options().copyDefaults(true);
 		saveConfig();
 		
-		getCommand("serverinfos").setExecutor(new Commands(this));
+		
+		this.getCommand("serverinfos").setExecutor(new Commands(this));
+		this.getCommand("adminsrinfos").setExecutor(new Commands(this));
 		
 		super.onEnable();
 	}
