@@ -10,4 +10,5 @@ Et redemmarer le serveur !
 # Commandes
 
 /serverinfos = Obtenir les infos serveur (joueur lambda)
+
 /adminsrinfos = Obtenir les infos serveur (administrateur)
