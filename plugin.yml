@@ -1,0 +1,8 @@
+name: IGInfos
+author: ZeSowK
+description: Un simple plugin français pour obtenir des simples informations sur le serveur
+version: 0.1
+main: fr.zsk.iginfo.IGInfos
+commands:
+  serverinfos:
+    description: Obtenir des informations serveur
