@@ -1,9 +1,11 @@
 name: IGInfos
 author: ZeSowK
-version: 0.3
+version: 0.4
 main: fr.zsk.iginfo.IGInfos
 commands:
   serverinfos:
     description: Obtenir des informations serveur
   adminsrinfos:
     description: Obtenir des informations serveur(Mode Administrateur)
+  playerinfos:
+    description: Obtenir des sur le joueur

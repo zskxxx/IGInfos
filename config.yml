@@ -1,5 +1,13 @@
+active-perm-use-server: false
+active-perm-use-player: false
 permission:
   admin: iginfos.admin
   all: iginfos.*
+  use: iginfos.use.server
+  usp: iginfos.use.player
  
 server-name: BaseNamePleaseChange
+
+active-infos-player: true
+active-infos-server: true
+
