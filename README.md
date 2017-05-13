@@ -15,12 +15,10 @@ Et redemmarer le serveur !
 
 # Changelog
 
-~ Debug du plugin
++ Debug du plugin
 + Ajout d'un fichier de configuration
 + Commande admin (Voir plus d'informations serveur)
 + Ajout de permission dans le nouveau fichier de configuration
++ Ajout de la commande /playerinfos (Ne marche pas)
++ Possibilitée d'activer une perm/commmande dans le fichier config.yml
 
-Légende:
-~ = Tâche effectuée
-+ = Ajout
-- = Suppression
