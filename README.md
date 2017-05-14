@@ -1,3 +1,5 @@
+
+![IGInfos](http://zesowkwebsite.livehost.fr/imagehosting/logo.png)
 # IGInfos
 Un simple plugin d'information serveur
 
