@@ -8,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
+
 public class Commands implements CommandExecutor {
 	
 	private FileConfiguration config;
@@ -17,7 +18,7 @@ public class Commands implements CommandExecutor {
 		this.config = pl.getConfig();
 	}
 	
-	
+	@SuppressWarnings("unused")
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String arg2, String[] args) {
 		if(cmd.getName().equalsIgnoreCase("serverinfos")){
@@ -71,7 +72,7 @@ public class Commands implements CommandExecutor {
 			String permuse = config.getString("permission.usp");
 			
 			Player p = (Player) sender;
-			Player targetPlayer = Bukkit.getPlayer(args[1]);
+			Player targetPlayer = Bukkit.getPlayer(args[0]);
 			if(activeuse = true){
 				if(p.hasPermission(permuse) || p.hasPermission(permadmin) || p.hasPermission(permall)){
 					if(targetPlayer.isOnline()){
@@ -80,10 +81,9 @@ public class Commands implements CommandExecutor {
 						p.sendMessage("§7En ligne depuis: §e" + targetPlayer.getPlayerTime());
 						p.sendMessage("§7Vie: §e" + targetPlayer.getHealth());
 						p.sendMessage("§7Level: §e" + targetPlayer.getLevel());
-						p.sendMessage("§7XP restant avant de levelup: §e" + targetPlayer.getExp() +"§7/§e"+ targetPlayer.getExpToLevel());
 						p.sendMessage("§l§m§e+----------§7----------§e----------§7----------§e+");
 					}else{
-						p.sendMessage("§cLe joueur "+ args[1].toString() +" n'est pas en ligne !");
+						p.sendMessage("§cLe joueur "+ args[0].toString() +" n'est pas en ligne !");
 					}
 				}
 			}

@@ -14,6 +14,7 @@ public class IGInfos extends JavaPlugin{
 		this.getCommand("serverinfos").setExecutor(new Commands(this));
 		this.getCommand("adminsrinfos").setExecutor(new Commands(this));
 		this.getCommand("playerinfos").setExecutor(new Commands(this));
+		//Bukkit.getPluginManager().registerEvents(new EventsListener(), this);
 		
 		super.onEnable();
 	}
